@@ -22,6 +22,10 @@ function App() {
   }
 
   function handleEditTodo(index){
+    const valToEdit = todos[index]
+    setTodoValue(valToEdit)
+  
+    handleDeleteTodo(index)
 
   }
 
@@ -29,7 +33,7 @@ function App() {
     <>
       <>
         <ToDoInput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos}/>
-        <ToDoList todoValue={todoValue} setTodoValue={setTodoValue}  handleDeleteTodo={handleDeleteTodo} todos={todos}/>
+        <ToDoList todoValue={todoValue} setTodoValue={setTodoValue}  handleDeleteTodo={handleDeleteTodo} todos={todos} handleEditTodo={handleEditTodo}/>
 
       </>
     </>
